@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riddle Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #0077cc;
+    }
+
+    #riddle-container {
+      text-align: center;
+      margin-top: 20px;
+      padding: 20px;
+      border: 2px solid #0077cc;
+      border-radius: 10px;
+      background-color: #e6f7ff;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    #riddle, #answer {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Riddle Generator</h1>
+  <div id="riddle-container">
+    <p id="riddle">Click "Generate Riddle" to start!</p>
+    <p id="answer" style="display: none;">Answer: </p>
+    <button onclick="generateRiddle()">Generate Riddle</button>
+    <button onclick="showAnswer()">Show Answer</button>
+  </div>
+
+  <script>
+    const riddles = [
+      { 
+        question: "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+        answer: "An echo"
+      },
+      {
+        question: "The more of this you take, the more you leave behind. What is it?",
+        answer: "Footsteps"
+      },
+      {
+        question: "What has to be broken before you can use it?",
+        answer: "An egg"
+      },
+      {
+        question: "I’m tall when I’m young, and I’m short when I’m old. What am I?",
+        answer: "A candle"
+      },
+      {
+        question: "What can travel around the world while staying in the same spot?",
+        answer: "A stamp"
+      }
+    ];
+
+    let currentRiddle = null;
+
+    function generateRiddle() {
+      const randomIndex = Math.floor(Math.random() * riddles.length);
+      currentRiddle = riddles[randomIndex];
+      document.getElementById('riddle').innerText = currentRiddle.question;
+      document.getElementById('answer').style.display = "none";
+    }
+
+    function showAnswer() {
+      if (currentRiddle) {
+        document.getElementById('answer').innerText = "Answer: " + currentRiddle.answer;
+        document.getElementById('answer').style.display = "block";
+      } else {
+        alert("Please generate a riddle first!");
+      }
+    }
+  </script>
+</body>
+</html>

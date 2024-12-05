@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background_image.jpg');
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: grey;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    color: blue;
+  }
+  
+  nav a {
+    color: blue;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .intro {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .galaxy-img {
+    width: 50%;
+    border: 2px solid white;
+  }
+  
+  #mission, #video, #discoveries, #graph {
+    padding: 20px;
+    margin: 20px;
+    background-color: grey;
+    border-radius: 10px;
+  }
+  
+  a {
+    color: rgb(243, 177, 107);
+  }
+  
