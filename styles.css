@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-image: url('background_image.jpg');
     background-size: cover;
-    background-color: bisque;
+    background-color: rgb(225, 151, 59);
     color: white;
     margin: 0;
     padding: 0;
